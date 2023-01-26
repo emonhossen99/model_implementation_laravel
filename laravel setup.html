@@ -1,0 +1,43 @@
+// create laravel project //
+* composer create-project laravel/laravel project name *
+// run laravel project //
+* php artisan serve *
+// laravel futures //
+1.Modulartity
+2.Testability
+3.Routing
+4.Configaration Managment
+5.Query Bulider and (ORM) {object Relation Mapper}
+6.Schema Bulider, Migration,Seeding
+7.Template Engine
+8.E-mailing
+9.Authtication
+10.Redis
+11.QueQues
+12.Events and command Bus
+// Genarate key //
+* php artisan key:genarate *
+// set Database //
+.env->DB_DATABASE = MY DATABASE NAME
+// project down //
+* php artisan down *
+// project up //
+* php artisan up *
+// option url //
+* Route::get("/nameDetails/{name?}",function(name="laravel"){
+} * 
+
+// expected value of url in just string value //
+Route::get('/product/{name}',function($name){
+   echo 'This Products Name Is :'.$name;
+})->where('name','[A-Za-z]+');
+
+// expected value of url in just number value //
+Route::get('/buyProduct/{productPrice}',function($productPrice){
+   echo 'This Products Price Is :'.$productPrice;
+})->where('productPrice','[0-9]+');
+
+// daynamic two paramiters //
+Route::get('/student/{id}/{name}',function($id,$name){
+   echo 'Your Id Number Is : '.$id." ".'And Your Name Is :'.$name;
+})->whereNumber('id')->whereAlpha('name');
